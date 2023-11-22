@@ -57,3 +57,22 @@
 .text-harga {
   font-size: 20px;
 }
+
+.image-box {
+  height: 400px;
+}
+
+.image-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content-subscribe {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.content-subscribe a {
+  color: #fff;
+}

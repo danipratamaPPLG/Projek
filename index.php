@@ -1,8 +1,8 @@
 <!-- baru sampai bagian ambil data produk dari database -->
 
 <?php
-    // require "koneksi.php";
-    // $queryProduk = mysqli_query($con, "SELECT id, nama, harga, foto, detail FROM produk LIMIT 6");
+    require "koneksi.php";
+    $queryProduk = mysqli_query($con, "SELECT id, nama, harga, foto, detail FROM produk LIMIT 6");
 ?>
 
 <!DOCTYPE html>
@@ -80,7 +80,9 @@
                 <?php while($data = mysqli_fetch_array($queryProduk)){ ?>
                 <div class="col=sm-6 col-md-4 mb-3">
                     <div class="card">
-                        <img src="image/<?php echo $data['foto']; ?>" class="card-img-top" alt="...">
+                        <div class="image-box">
+                            <img src="image/<?php echo $data['foto']; ?>" class="card-img-top" alt="...">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $data['nama']; ?></h5>
                             <p class="card-text text-truncate"><?php echo $data['detail']; ?></p>
@@ -91,9 +93,12 @@
                 </div>
                 <?php } ?>
             </div>
+            <a class="btn btn-outline-warning mt-3" href="produk.php">See More</a>
         </div>
     </div>
 
+    <!-- footer -->
+    <?php require "footer.php"; ?>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="fontawesome/js.all.min.js"></script>
 </body>

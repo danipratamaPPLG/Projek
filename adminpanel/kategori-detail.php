@@ -21,71 +21,83 @@ $data = mysqli_fetch_array($query);
 </head>
 
 <body>
-<?php require "navbar.php"; ?>
-<div class="container mt-5">
-    <div class="col-12-md-6">
-        <h2>Detail Kategori</h2>
-        <form action="" method="post">
-            <div>
-            <label for="kategori">Kategori</label>
-            <input type="text" name="kategori" id="kategori" value="<?php echo $data['nama'];?>" class="form-control mt-3">
-            </div>
-            <div class="mt-5 d-flex justify-content-between">
-                <button type="submit" class="btn btn-primary" name="editbtn">Edit</button>
-                <button type="submit" class="btn btn-danger" name="deletebtn">Delete</button>
-            </div>
-        </form>
-        <?php 
-            if(isset($_POST['editbtn'])){
+    <?php require "navbar.php"; ?>
+    <div class="container mt-5">
+    <h2>Detail Kategori</h2>
+        <div class="col-12-md-6">
+            <form action="" method="post">
+                <div>
+                    <label for="kategori">Kategori</label>
+                    <input type="text" name="kategori" id="kategori" value="<?php echo $data['nama']; ?>" class="form-control mt-3">
+                </div>
+                <div class="mt-5 d-flex justify-content-between">
+                    <button type="submit" class="btn btn-primary" name="editbtn">Edit</button>
+                    <button type="submit" class="btn btn-danger" name="deletebtn">Delete</button>
+                </div>
+            </form>
+            <?php
+            if (isset($_POST['editbtn'])) {
                 $kategori = htmlspecialchars($_POST['kategori']);
-                if($data['nama']==$kategori){
-                   ?> <meta http-equiv="refresh" content="0; url=kategori.php" />
-                   <?php
-                }
-                else{
-                    $query = mysqli_query($con,"SELECT * FROM kategori where nama ='$kategori'");
+                if ($data['nama'] == $kategori) {
+            ?>
+                    <meta http-equiv="refresh" content="0; url=kategori.php" />
+                    <?php
+                } else {
+                    $query = mysqli_query($con, "SELECT * FROM kategori where nama ='$kategori'");
                     $jumlahData = mysqli_num_rows($query);
-                    
-                    if($jumlahData > 0){
-                        ?>
-                             <div class="alert alert-primary mt-3" role="start">
-                        Kategori Sudah Ada
-                    </div>
+
+                    if ($jumlahData > 0) {
+                    ?>
+                        <div class="alert alert-primary mt-3" role="start">
+                            Kategori Sudah Ada
+                        </div>
                         <?php
-                    }else
-                    {
+                    } else {
                         $querySimpan = mysqli_query($con, "UPDATE kategori SET nama='$kategori' WHERE id='$id'");
                         if ($querySimpan) {
-                            ?>
-                                <div class="alert alert-primary mt-3" role="start">
-                                    Kategori Berhasil Diupdate
-                                </div>
-                                <meta http-equiv="refresh" content="2; url=kategori.php" />
+                        ?>
+                            <div class="alert alert-primary mt-3" role="start">
+                                Kategori Berhasil Diupdate
+                            </div>
+                            <meta http-equiv="refresh" content="2; url=kategori.php" />
                     <?php
-                               
-                            }
+
+                        }
                     }
                 }
-            }    
-            
-            if(isset($_POST['deletebtn'])){
-                $queryDelete = mysqli_query($con,"DELETE FROM kategori WHERE id='$id'");
-                
-                if($queryDelete){
+            }
+
+            if (isset($_POST['deletebtn'])) {
+                $queryCheck = mysqli_query($con, "SELECT * FROM produk WHERE kategori_id = '$id'");
+                $dataCount = mysqli_num_rows($queryCheck);
+
+                if ($dataCount > 0) {
                     ?>
-                                <div class="alert alert-primary mt-3" role="start">
-                                    Kategori Berhasil Dihapus
-                                </div>                
-                                <meta http-equiv="refresh" content="2; url=kategori.php" />        
-                    <?php
+                    <div class="alert alert-warning mt-3" role="start">
+                        Kategori Tidak Bisa Dihapus Karena Sudah Digunakan Di Produk
+                    </div>
+
+                <?php
+                    die();
+                }
+
+                $queryDelete = mysqli_query($con, "DELETE FROM kategori WHERE id='$id'");
+
+                if ($queryDelete) {
+                ?>
+                    <div class="alert alert-primary mt-3" role="start">
+                        Kategori Berhasil Dihapus
+                    </div>
+                    <meta http-equiv="refresh" content="2; url=kategori.php" />
+            <?php
+                } else {
+                    echo mysqli_error($con);
                 }
             }
-            else{
-                echo mysqli_error($con);
-            }
-        ?>
+
+            ?>
+        </div>
     </div>
-</div>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../fontawesome/js/all.min.js"></script>
 </body>

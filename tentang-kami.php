@@ -22,15 +22,19 @@
     <div class="container-fluid py-5">
         <div class="container fs-5 text-center">
             <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum repellendus cumque, quibusdam laboriosam totam magni esse perferendis magnam, voluptates cupiditate minima itaque incidunt distinctio consectetur! Modi commodi atque, consequuntur ad quae eius pariatur quos fugiat nemo expedita iure sunt recusandae laudantium qui aperiam culpa architecto nam maxime quas. Officiis perspiciatis expedita voluptatibus quaerat fugit quidem, maxime, voluptate illo iusto totam quis, nobis cum iure magni fuga id eum est aspernatur. At molestias, adipisci labore non quae quo obcaecati officia culpa impedit praesentium et earum accusantium ullam? Fugit iure assumenda facere molestiae mollitia dolore officiis, sequi quasi, maiores nisi, provident illum!
+                Selamat datang di "New Arrival" – tempat di mana gaya bertemu dengan kesegaran! Di "New Arrival," kami mengkurasi koleksi pakaian terbaru dan paling trendi untuk memastikan Anda tetap unggul dalam permainan gaya. Berdiri dengan semangat untuk segala hal chic dan kontemporer, emporium fashion kami berdedikasi untuk memberikan pengalaman berbelanja yang seexciting koleksi kami yang terus berkembang.
             </p>
 
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam veniam aliquid voluptatem repellat tenetur incidunt voluptas vitae sequi explicabo expedita provident alias facere culpa dicta, ipsa harum totam illo? Impedit itaque ipsa iure fugiat cumque nostrum ducimus, eveniet explicabo porro. Quasi est natus labore quisquam officiis hic assumenda aut corrupti id officia voluptas quibusdam tenetur inventore unde, nobis dolore rem illum delectus fugit sapiente similique? Repellendus magnam eveniet recusandae vel id asperiores sint dicta aperiam, quos ipsa expedita nesciunt ex?
+                Kami memahami bahwa fashion bukan hanya tentang pakaian; itu adalah pernyataan, ekspresi kepribadian. Koleksi kami yang dipilih dengan hati-hati menampilkan berbagai gaya, mulai dari esensial kasual hingga potongan terinspirasi runway. Berkolaborasi dengan desainer terkemuka dan merek pilihan, kami menyajikan pilihan berkualitas yang selalu sejalan dengan tren terkini.
             </p>
 
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum inventore recusandae, nesciunt labore dolore autem at architecto eveniet dolorem, perspiciatis eligendi quisquam. Reiciendis tempore ipsam quia quis saepe iusto nesciunt quisquam veritatis aperiam vel? Ea dignissimos eius atque iure, voluptatum quo itaque, fugiat natus, velit iste corporis error reiciendis officia quisquam hic veniam repudiandae eaque. Sapiente adipisci ab est sint quam, quod facere voluptatem maiores atque delectus provident repellendus ea neque voluptatibus? Fuga, minus voluptatibus est atque et iste incidunt quasi velit ratione quos adipisci nostrum officia corrupti omnis praesentium quae in cumque nihil provident, culpa quisquam accusamus tempora dolorem consectetur. Nemo aspernatur ipsa soluta omnis officiis. Adipisci nemo ex quas assumenda laboriosam, molestias velit itaque, error repellendus nobis labore quam nesciunt et quo sequi ducimus doloribus, accusantium repudiandae beatae amet consectetur eveniet. Ut placeat earum corrupti explicabo rerum eum incidunt laudantium commodi, debitis, nostrum quam itaque consequuntur quia doloribus?
+                "New Arrival" bukan hanya sebuah toko; ini adalah tujuan fashion yang merayakan individualitas dan mendorong Anda untuk mengekspresikan diri melalui gaya unik Anda. Tim kami yang berdedikasi siap membantu Anda menemukan opsi fashion terbaik yang disesuaikan dengan selera dan kebutuhan Anda.
+            </p>
+
+            <p>
+                Terima kasih atas dukungan Anda, dan bergabunglah bersama kami dalam menjelajahi dunia fashion yang terus berkembang di "New Arrival." Selamat berbelanja, dan percayakan pada kami untuk meningkatkan gaya Anda dengan setiap kedatangan produk baru!
             </p>
         </div>
     </div>
